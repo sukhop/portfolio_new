@@ -1,0 +1,137 @@
+@import './var.scss';
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 1rem 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+    .navigation {
+        @include horiz-center;
+        justify-content: space-between;
+        .item-left {
+            .logo {
+                @include horiz-center;
+                font-weight: 600;
+                font-size: 1.5rem;
+                font-family: $font-prompt;
+                img {
+                    width: 30px;
+                }
+                > span {
+                    margin-left: 7px;
+                    > span {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+        .item-right {
+            position: relative;
+            @include horiz-center;
+            .menu {
+                @include horiz-center;
+                font-family: $font-space;
+                gap: 20px;
+                a {
+                    color: $color-light;
+                }
+                a.active {
+                    color: $color-primary;
+                    font-weight: 700;
+                }
+            }
+            .ham {
+                display: none;
+            }
+        }
+    }
+}
+header.glass {
+    @include glassmorphism;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    background-color: rgba($bg-color, 0.3);
+}
+@media (min-width: 992px) {
+    header {
+        .navigation {
+            .item-right {
+                .menu {
+                    a {
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    header {
+        .navigation {
+            .item-left {
+                .logo {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .item-right {
+                .menu {
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    right: -50%;
+                    li {
+                        margin-top: 20px;
+                        top: -100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: translateY(-10px);
+                        transition: all 0.3s ease;
+                    }
+                    a {
+                        @include glassmorphism;
+                        @include horiz-center;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        // color: $color-primary;
+                        // background-color: $color-light;
+                        span {
+                            display: none
+                        }
+                        i {
+                            line-height: 0;
+                        }
+                    }
+                    a.active {
+                        color: $color-light;
+                        background-color: $color-primary;
+                    }
+                }
+                .menu.active_nav {
+                    li {
+                        position: relative;
+                        top: 100%;
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition: all 0.3s ease;
+                    }
+                }
+                .ham {
+                    @include horiz-center;
+                    justify-content: center;
+                    width: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

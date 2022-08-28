@@ -1,0 +1,39 @@
+// Variables
+$font-source: 'Source Code Pro', monospace;
+$font-rubik: 'Rubik', sans-serif;
+$font-space: 'Space Mono', monospace;
+$font-prompt: 'Prompt', sans-serif;
+
+$bg-color: #080C24;
+$bg-dark: #151E34;
+$color-primary: #8843F2;
+$color-lightgray: #212121;
+$color-light: #F5EDED;
+$theme-shadow: 0px 10px 30px -15px #5319ac;
+
+@mixin horiz-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin glassmorphism {
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 7px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0px 10px 30px -15px #5319ac;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

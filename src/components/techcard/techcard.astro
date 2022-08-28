@@ -1,0 +1,20 @@
+---
+export interface Props {
+    cardClass: string;
+    imageSource: string;
+    toolName: string;
+
+}
+const {cardClass, imageSource, toolName} = Astro.props;
+---
+
+<div class={cardClass}>
+    <div class="tech_image">
+        <img src={imageSource} alt="">
+    </div>
+    <div class="tech_text">
+        <div class="name">
+            {toolName}
+        </div>
+    </div>
+</div>
