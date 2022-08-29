@@ -1,0 +1,149 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Skillcard from "../components/techcard/skillcard.astro";
+import Li from "../../public/buttons/filterButton.astro";
+---
+<Layout title="About SukhOP">
+    <section class="about">
+        <div class="section section-y">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-8 py-6rem">
+                    <h2 class="mb-4"><span class="text_primary">.about</span>(me);</h2>
+                    <p class="mb-3">I am a <span class="age"></span> year old self-taught Graphic Designer & Front-End Web Developer, and now I am a final-year student pursuing a degree in Computer Science here in India. I am proficient in frontend development and graphic designing. Likewise, I have 5 years of experience in Graphic Designing & 2 years of experience in Front-End Development. I have built and maintained many websites for clients.</p>
+                    <p class="mb-3">I am passionate about the technology industry and want to get involved in new opportunities.</p>
+                    <p>Currently I am working as Web Developer at <span class="text_primary">Axionic Software</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="techs offbg">
+        <div class="section section-y">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-8">
+                    <h2 class="mb-4"><span class="text_primary">.techSkills</span>();</h2>
+                    <h6 class="sub mb-4">A list of my favorite tools and technologies that I use on a regular basis.</h6>
+                    <ul class="filter mb-5">
+                        <Li filterClass="filter_button active" dataFilter="all" filterName=".all()"/>
+                        <Li filterClass="filter_button" dataFilter="graphic" filterName=".gfxDesign()"/>
+                        <Li filterClass="filter_button" dataFilter="webdesign" filterName=".webDesign()"/>
+                        <Li filterClass="filter_button" dataFilter="webdev" filterName=".webDev()"/>
+                        <Li filterClass="filter_button" dataFilter="backend" filterName=".backend()"/>
+                        <Li filterClass="filter_button" dataFilter="cms" filterName=".cms()"/>
+                        <Li filterClass="filter_button" dataFilter="tolearn" filterName=".toLearn()"/>
+                    </ul>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="skill_box">
+                                <Skillcard
+                                    skillClass="skill_wrapper graphic"
+                                    imageSource="/images/photoshop.svg"
+                                    imageAlt="Adobe Photoshop"
+                                    skillName="Adobe Photoshop"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper graphic"
+                                    imageSource="/images/illustrator.svg"
+                                    imageAlt="Adobe Illustrator"
+                                    skillName="Adobe Illustrator"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdesign"
+                                    imageSource="/images/xd.svg"
+                                    imageAlt="Adobe XD"
+                                    skillName="Adobe XD"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdesign"
+                                    imageSource="/images/figma.svg"
+                                    imageAlt="Figma"
+                                    skillName="Adobe After Effects"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper tolearn"
+                                    imageSource="/skill_image/ae.svg"
+                                    imageAlt="adobe After Effects"
+                                    skillName="Adobe After Effects"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/html.svg"
+                                    imageAlt="HTML5"
+                                    skillName="HTML5"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/css.svg"
+                                    imageAlt="CSS3"
+                                    skillName="CSS3"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/js.svg"
+                                    imageAlt="JavaScript"
+                                    skillName="JavaScript"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/images/astro.svg"
+                                    imageAlt="Astro"
+                                    skillName="Astro"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdesign"
+                                    imageSource="/images/tailwind.svg"
+                                    imageAlt="Tailwind CSS"
+                                    skillName="Tailwind CSS"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdesign"
+                                    imageSource="/skill_image/bootstrap.svg"
+                                    imageAlt="Bootstrap"
+                                    skillName="Bootstrap"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/gsap.svg"
+                                    imageAlt="Gsap"
+                                    skillName="GSAP - GreenSock"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper backend"
+                                    imageSource="/skill_image/c.svg"
+                                    imageAlt="C Programming Language"
+                                    skillName="C Programming Language"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper tolearn"
+                                    imageSource="/skill_image/cpp.svg"
+                                    imageAlt="C++ Programming Language"
+                                    skillName="C++ Programming Language"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper tolearn"
+                                    imageSource="/skill_image/php.svg"
+                                    imageAlt="PHP"
+                                    skillName="PHP"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/jquery.svg"
+                                    imageAlt="jQuery"
+                                    skillName="jQuery"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/sass.svg"
+                                    imageAlt="SASS"
+                                    skillName="SASS"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper cms"
+                                    imageSource="/skill_image/wordpress.svg"
+                                    imageAlt="WordPress"
+                                    skillName="WordPress"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/github.svg"
+                                    imageAlt="Github"
+                                    skillName="Github"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper webdev"
+                                    imageSource="/skill_image/git.svg"
+                                    imageAlt="Git"
+                                    skillName="Git"/>
+                                <Skillcard
+                                    skillClass="skill_wrapper graphic"
+                                    imageSource="/skill_image/canva.svg"
+                                    imageAlt="Canva"
+                                    skillName="Canva"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

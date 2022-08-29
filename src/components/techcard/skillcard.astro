@@ -1,0 +1,18 @@
+---
+export interface Props {
+    skillClass: string;
+    imageSource: string;
+    imageAlt: string;
+    skillName: string;
+}
+const {skillClass, imageSource, imageAlt, skillName} = Astro.props;
+---
+
+<div class={skillClass}>
+    <div class="skill_image">
+        <img src={imageSource} alt={imageAlt}>
+    </div>
+    <div class="skill_name">
+        {skillName}
+    </div>
+</div>

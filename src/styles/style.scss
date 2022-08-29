@@ -36,6 +36,9 @@ body {
 .text-white {
     color: $color-light !important;
 }
+.text_primary {
+    color: $color-primary;
+}
 h1, h2, h3 {
     font-family: $font-space;
     font-weight: 600;
@@ -57,6 +60,7 @@ a {
 }
 p {
     margin: 0;
+    line-height: 2;
 }
 ul {
     margin: 0;
@@ -95,6 +99,10 @@ ul {
     &:hover {
         transform: translateY(-5px);
     }
+}
+.offbg {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    background-color: rgba(0,0,0,0.2);
 }
  
 // Utils ends
@@ -190,6 +198,52 @@ footer {
     background-color: rgba($bg-color, 0.3);
 }
 // footer styling ends
+// about styling starts
+.filter {
+    @include horiz-center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: $font-space;
+    .filter_button {
+        @include glassmorphism;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    .filter_button.active {
+        background-color: rgba($color-primary, 0.18);
+    }
+}
+.skill_box {
+    .skill_wrapper {
+        overflow: hidden;
+        @include glassmorphism;
+        @include horiz-center;
+        padding: 1rem;
+        border-radius: 20px;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .skill_image {
+            width: 50px;
+            height: 50px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .skill_name {
+            font-family: $font-prompt;
+            border-left: 1px solid rgba( 255, 255, 255, 0.18 );
+            padding-left: 1rem;
+        }
+    }
+}
+// about styling ends
 @media (min-width: 320px) and (max-width: 480px) {
     // utils
     .section {

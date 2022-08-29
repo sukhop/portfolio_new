@@ -1,0 +1,9 @@
+---
+export interface Props {
+    filterClass: string;
+    dataFilter: string;
+    filterName: string;
+}
+const {filterClass, dataFilter, filterName} = Astro.props;
+---
+<li class={filterClass} data-filter={dataFilter}>{filterName}</li>
