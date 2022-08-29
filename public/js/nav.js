@@ -25,7 +25,7 @@ let path = window.location.pathname;
 if(path === '/') {
   $('.nav_home').addClass('active');
 }
-if(path === '/about') {
+if(path === '/about/') {
   $('.nav_about').addClass('active');
 }
 if(path === '/work') {
